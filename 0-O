@@ -1,0 +1,16 @@
+O(n)
+O(n^2)
+O(n^2)
+if (ptr2->prev != NULL && ptr2->prev != head && ptr2->n < temp2->n)
+            {
+                ptr2->prev = temp2->prev;
+                temp2->prev->next = ptr2;
+                temp2->next = ptr2->next;
+                ptr2->next->prev = temp2;
+                ptr2->next = temp2;
+                temp2->prev = ptr2;
+                temp2 = ptr2->prev;
+                temp = ptr->prev;
+                    /* swap*/
+                print_list(*list);
+            }
