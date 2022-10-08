@@ -71,4 +71,5 @@ void insertion_sort_list(listint_t **list)
             temp = ptr->prev;
         }
     }
+    return;
 }
