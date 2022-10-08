@@ -59,16 +59,22 @@ void insertion_sort_list(listint_t **list)
             else
             {
                 ptr = ptr2;
-                ptr2 = ptr->next;
-                temp = ptr->prev;
+                if (ptr != NULL)                                        
+                {                                                       
+                   ptr2 = ptr->next;                                   
+                   temp = ptr->prev;                                   
+                }
             }
             
         }
         else
         {
             ptr = ptr2;
-            ptr2 = ptr->next;
-            temp = ptr->prev;
+            if (ptr != NULL)                                        
+            {                                                       
+              ptr2 = ptr->next;                                   
+              temp = ptr->prev;                                   
+            }
         }
     }
 }
