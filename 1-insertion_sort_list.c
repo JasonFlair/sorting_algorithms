@@ -1,3 +1,4 @@
+
 #include "sort.h"
 
 /** 
@@ -21,10 +22,8 @@ void insertion_sort_list(listint_t **list)
     {
         head = *list;
         ptr = head->next;
-        ptr->prev = head;
-        ptr2 = ptr->next;
-        ptr2->prev = ptr;
         temp = ptr->prev;
+        ptr2 = ptr->next;
         
     }
     while (ptr != NULL)
@@ -68,7 +67,7 @@ void insertion_sort_list(listint_t **list)
         }
         else
         {
-            ptr = ptr->next;
+            ptr = ptr2;
             ptr2 = ptr->next;
             temp = ptr->prev;
         }
