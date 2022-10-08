@@ -8,9 +8,15 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-    listint_t *head, *temp, *ptr, *ptr2;
+    listint_t *head, *temp, *ptr, *ptr2, *ptr_next, *prev;
 
-    if (list != NULL)
+    head = *list;
+    if (head == NULL || head->next == NULL)
+    {
+        return;
+    }
+
+    if (head != NULL)
     {
         head = *list;
         ptr = head->next;
@@ -22,20 +28,34 @@ void insertion_sort_list(listint_t **list)
     }
     while (ptr != NULL)
     {
-        if (ptr->prev != NULL && ptr->prev != head)
+        if (ptr->prev != NULL)
         {
             if (ptr->n < temp->n)
             {
-                ptr->prev = temp->prev;
-                temp->prev->next = ptr;
-                temp->next = ptr->next;
-                ptr->next->prev = temp;
-                ptr->next = temp;
-                temp->prev = ptr;
-                /* swap done now print */
-                print_list(*list);
-                temp = ptr->prev;
-                /* change temp and check again */
+               prev = temp->prev; /* hold value of temp prev */
+               ptr_next = ptr->next;
+               /* holds value of ptr next at the time */
+
+               temp->next = ptr_next;
+               ptr->next = temp;
+               temp->prev = ptr;
+               if (ptr_next != NULL)
+               {
+                ptr_next->prev = temp;
+               }
+               ptr->prev = prev;
+               if (prev == NULL)
+               {
+                *list = ptr;
+                /* ptr becomes head */
+               }
+               else
+               {
+                prev->next = ptr;
+                /* else prev-next points to ptr */
+               }
+               print_list(*list);
+               temp = ptr->prev;
             }
             else
             {
