@@ -8,11 +8,21 @@
  */
 void selection_sort(int *array, size_t size)
 {
-    unsigned int i, j;
+    unsigned int i, j, array_size;
     int sp, fp, min, temp;
     i = 0;
     sp = 0; /* starting position marker */
     fp = 0; /* former position marker */
+
+    if (size == 1)
+    {
+        print_array(array, size);
+    }
+    if (size == 0)
+    {
+        return;
+    }
+    
 
     while (i < size)
     {
