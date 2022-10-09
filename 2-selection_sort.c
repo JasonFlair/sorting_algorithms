@@ -8,7 +8,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-    unsigned int i, j, array_size;
+    unsigned int i, j;
     int sp, fp, min, temp;
     i = 0;
     sp = 0; /* starting position marker */
