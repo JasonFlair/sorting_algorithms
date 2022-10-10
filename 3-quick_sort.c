@@ -13,6 +13,7 @@ void swap(int *x, int *y)
     *x = *y;
     *y = temp;
 }
+
 /**
  * partition_index - func returns partition
  * index 
@@ -20,9 +21,10 @@ void swap(int *x, int *y)
  * @array: array to be sorted 
  * @start: starting position
  * @end: end position 
- * @arr_size: arr size
- * Return: int 
+ * @arr_size: the arr size
+ * Return: returns an int 
  */
+
 int partition_index(int *array, int start, int end, size_t arr_size)
 {
     int i, j;
@@ -41,14 +43,16 @@ int partition_index(int *array, int start, int end, size_t arr_size)
     print_array(array, arr_size);
     return i;
 }
+
 /**
  * quick_sorter - quick sort recursion 
  * 
  * @array: array to be sorted 
  * @start: starting position
  * @end: end position 
- * @arr_size: arr size 
+ * @arr_size: the arr size 
  */
+
 void quick_sorter(int *array, int start, int end, size_t arr_size)
 {
 
@@ -59,12 +63,14 @@ void quick_sorter(int *array, int start, int end, size_t arr_size)
         quick_sorter(array, p_idx + 1, end, arr_size);
     }
 }
+
 /**
  * quick sort - quick sort function 
  * 
  * @array: array to be sorted
  * @size: size of arr
  */
+
 void quick_sort(int *array, size_t size)
 {
     if (array == NULL || size < 2)
