@@ -23,5 +23,9 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+int partition_index(int *array, int start, int end, size_t arr_size);
+void swap(int *x, int *y);
+void quick_sorter(int *array, int start, int end, size_t arr_size);
+void quick_sort(int *array, size_t size);
 
 #endif
