@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- * swap - swap function
+ * swap - the swap function
  * @x: first param
  * @y: second param
- * Return: void
+ * Return - void
  */
 void swap(int *x, int *y)
 {
@@ -23,7 +23,7 @@ void swap(int *x, int *y)
  * @start: starting position
  * @end: end position 
  * @arr_size: the arr size
- * Return: returns an int 
+ * Return - returns an int 
  */
 
 int partition_index(int *array, int start, int end, size_t arr_size)
@@ -52,7 +52,7 @@ int partition_index(int *array, int start, int end, size_t arr_size)
  * @start: starting position
  * @end: end position 
  * @arr_size: the arr size
- * Return: void
+ * Return - void
  */
 
 void quick_sorter(int *array, int start, int end, size_t arr_size)
