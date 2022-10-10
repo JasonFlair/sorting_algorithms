@@ -4,6 +4,7 @@
  * swap - swap function
  * @x: first param
  * @y: second param
+ * Return: void
  */
 void swap(int *x, int *y)
 {
@@ -50,7 +51,8 @@ int partition_index(int *array, int start, int end, size_t arr_size)
  * @array: array to be sorted 
  * @start: starting position
  * @end: end position 
- * @arr_size: the arr size 
+ * @arr_size: the arr size
+ * Return: void
  */
 
 void quick_sorter(int *array, int start, int end, size_t arr_size)
@@ -69,6 +71,7 @@ void quick_sorter(int *array, int start, int end, size_t arr_size)
  * 
  * @array: array to be sorted
  * @size: size of arr
+ * Return: void
  */
 
 void quick_sort(int *array, size_t size)
