@@ -67,7 +67,7 @@ void quick_sorter(int *array, int start, int end, size_t arr_size)
 }
 
 /**
- * quick sort - quick sort function 
+ * quick_sort - quick sort function 
  * 
  * @array: array to be sorted
  * @size: size of arr
