@@ -35,13 +35,20 @@ int partition_index(int *array, int start, int end, size_t arr_size)
     {
         if (array[j] <= array[end])
         {
-            swap(&array[j], &array[i]);
-            print_array(array, arr_size);
+            if (array[j] != array[i])
+            {
+                swap(&array[j], &array[i]);
+                print_array(array, arr_size);   
+            }
             i++;
         }
     }
-    swap(&array[end], &array[i]);
-    print_array(array, arr_size);
+    if (array[end] != array[i])
+    {
+        swap(&array[end], &array[i]);
+        print_array(array, arr_size);
+    }
+    
     return i;
 }
 
