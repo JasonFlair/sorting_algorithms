@@ -18,11 +18,11 @@ void swap(int *x, int *y)
 /**
  * @brief partition index func
  * 
- * @param array array to be sorted
- * @param start the start 
- * @param end the end
- * @param arr_size array size
- * @return int 
+ * @param array: array to be sorted
+ * @param start: the start 
+ * @param end: the end
+ * @param arr_size: array size
+ * @return: int 
  */
 
 int partition_index(int *array, int start, int end, size_t arr_size)
