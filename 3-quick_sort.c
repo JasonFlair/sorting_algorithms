@@ -16,14 +16,13 @@ void swap(int *x, int *y)
 }
 
 /**
- * partition_index - func returns partition
- * index 
+ * @brief partition index func
  * 
- * @array: array to be sorted 
- * @start: starting position
- * @end: end position 
- * @arr_size: the arr size
- * Return: returns an int 
+ * @param array array to be sorted
+ * @param start the start 
+ * @param end the end
+ * @param arr_size array size
+ * @return int 
  */
 
 int partition_index(int *array, int start, int end, size_t arr_size)
